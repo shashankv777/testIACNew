@@ -1,0 +1,10 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: Intentionally vulnerable CloudFormation template for IaC testing
+
+Resources:
+  VulnerableTestBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      AccessControl: PublicRead
+      VersioningConfiguration:
+        Status: Suspended
